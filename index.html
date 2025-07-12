@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbers Bar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Rezervační tlačítko -->
+  <button class="rezervace" id="openModal">Rezervace</button>
+
+  <!-- Rezervační modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&#215</span>
+      <form>
+        <h2>Rezervujte si termín</h2>
+        <label for="name">Jméno:
+          <input type="text" id="name" placeholder="Enter your name..." required />
+        </label>
+        <label>E-mail:
+          <input type="email" placeholder="Enter your email..." required />
+        </label>
+        <label>Datum:
+          <input type="date" required />
+        </label>
+        <button class="button" type="submit">Odeslat</button>
+      </form>
+    </div>
+  </div>
+
+  <header>
+    <h1 id="domu">Barber's Bar</h1>
+    <nav class="list">
+      <a href="#domu">Domů</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="flex-container">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-scissors" viewBox="0 0 16 16">
+          <path d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0m7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+        </svg>
+        <h3>Barbershop</h3>
+        <p>Péče o vzhled jako zážitek – dopřejte si to nejlepší.</p>
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor" class="bi bi-cup-straw" viewBox="0 0 16 16">
+            <path d="M13.902.334a.5.5 0 0 1-.28.65l-2.254.902-.4 1.927c.376.095.715.215.972.367.228.135.56.396.56.82q0 .069-.011.132l-.962 9.068a1.28 1.28 0 0 1-.524.93c-.488.34-1.494.87-3.01.87s-2.522-.53-3.01-.87a1.28 1.28 0 0 1-.524-.93L3.51 5.132A1 1 0 0 1 3.5 5c0-.424.332-.685.56-.82.262-.154.607-.276.99-.372C5.824 3.614 6.867 3.5 8 3.5c.712 0 1.389.045 1.985.127l.464-2.215a.5.5 0 0 1 .303-.356l2.5-1a.5.5 0 0 1 .65.278M9.768 4.607A14 14 0 0 0 8 4.5c-1.076 0-2.033.11-2.707.278A3.3 3.3 0 0 0 4.645 5c.146.073.362.15.648.222C5.967 5.39 6.924 5.5 8 5.5c.571 0 1.109-.03 1.588-.085zm.292 1.756C9.445 6.45 8.742 6.5 8 6.5c-1.133 0-2.176-.114-2.95-.308a6 6 0 0 1-.435-.127l.838 8.03c.013.121.06.186.102.215.357.249 1.168.69 2.438.69s2.081-.441 2.438-.69c.042-.029.09-.094.102-.215l.852-8.03a6 6 0 0 1-.435.127 9 9 0 0 1-.89.17zM4.467 4.884s.003.002.005.006zm7.066 0-.005.006zM11.354 5a3 3 0 0 0-.604-.21l-.099.445.055-.013c.286-.072.502-.149.648-.222"></path>
+          </svg>
+        </svg>
+        <h3>Bar</h3>
+        <p>Kvalitní drinky, káva i nealko – každý si vybere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekce vyhledávání obrázků -->
+  <!-- <section class="search-section">
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Hledat obrázky..." required />
+      <button class="button" type="submit">Hledat</button>
+      <button id="show-favorites" class="button">Zobrazit oblíbené</button>
+
+    </form>
+    <div id="spinner" style="display: none; text-align:center; margin-top: 20px;">Načítám...</div>
+    <div id="image-gallery" class="flex-container"></div>
+    <div id="pagination" style="display: none; justify-content: center; gap: 10px; margin-top: 20px;">
+      <button id="prev-btn">Předchozí</button>
+      <span id="page-info">Strana 1 z X</span>
+      <button id="next-btn">Další</button>
+    </div>
+  </section> -->
+  <section class="search-section">
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Hledat obrázky..." required />
+    <button class="button" type="submit">Hledat</button>
+  </form>
+  <button id="show-favorites" class="button">Zobrazit oblíbené</button>
+
+  <div id="spinner" style="display: none; text-align:center; margin-top: 20px;">Načítám...</div>
+  <div id="image-gallery" class="flex-container"></div>
+
+  <div id="pagination" style="display: none; justify-content: center; gap: 10px; margin-top: 20px;">
+    <button id="prev-btn" class="button">Předchozí</button>
+    <span id="page-info">Strana 1 z X</span>
+    <button id="next-btn" class="button">Další</button>
+  </div>
+</section>
+
+
+  <!-- Modal pro obrázky -->
+  <div id="image-modal" class="modal" style="display: none; justify-content: center; align-items: center;">
+    <div class="modal-content">
+      <span id="close-modal" class="close">×</span>
+      <img id="modal-img" src="" alt="" style="width: 100%; height: auto;" />
+      <div id="modal-info"></div>
+    </div>
+  </div>
+
+  <section class="Mapa">
+    <h2>Podívej se k nám</h2>
+    <iframe class="mapka" src="https://mapy.cz/s/mudujugero"></iframe>
+  </section>
+
+  <footer>
+    <nav class="kontakty" id="kontakt">
+      <li><a href="https://www.instagram.com/">Instagram</a></li>
+      <li><a href="https://www.facebook.com/">Facebook</a></li>
+      <li><a href="tel:+420776073631">+420776073631</a></li>
+      <li><a href="mailto:Barbrsbar@gmail.com">Barbrsbar@gmail.com</a></li>
+    </nav>
+    <p>&copy; 2025 Barbers Bar</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
